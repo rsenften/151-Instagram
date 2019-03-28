@@ -84,10 +84,7 @@ body {
 }
 
 .brand-name-img {
-    background-image: image-url("core-sprite.png");
-    background-repeat: no-repeat;
     background-position: 0 0;
-    position: relative;
     height: 51px;
     width: 175px;
 }
@@ -127,6 +124,12 @@ body {
     }
 }
 
+footer .nav-item {
+    color: #003569 !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 .carousel-fade {
     .carousel-item.active {
         opacity: 1;
@@ -149,3 +152,4 @@ body {
 .light-color {
     color: #999;
 }
+
