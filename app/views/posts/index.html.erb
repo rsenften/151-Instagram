@@ -1,3 +1,4 @@
+<p><%= link_to "Log out", destroy_user_session_path, method: :delete%></p>
 <div class="d-flex flex-column align-items-center mt-3">
     <div class="col-xl-7 col-lg-8 col-md-10 col-sm-11 post-card">
         <div class="card">
@@ -24,42 +25,8 @@
                 <% end %>
             </div>
         </div>
+        <div id="post">
+            <%= render 'shared/posts_list' %>
+        </div>
     </div>
 </div>
-
-
-
-=begin <% @posts.each do |post| %>
-    <div class="card mt-3 post">
-        <div class="card-header d-flex align-items-center">
-            <%= link_to user_path(post.user), class: "no-text-decoration" do %>
-                <%= image_tag avatar_url(post.user), class: "post-author-icon" %>
-            <% end %>
-            <%= link_to user_path(post.user), class: "normal-color no-text-decoration",
-                title: post.user.name do %>
-                <strong><%= post.user.name %></strong>
-            <% end %>
-        </div>
-        <div class="card-body">
-            <div class="row actions">
-                <a href="core-sprite love hide-text"> Love </a>
-                <a href="core-sprite comment hide-text"> Comment </a>
-                <a href="core-sprite bookmark hide-text"> Bookmark </a>
-            </div>
-        </div>
-        <div><strong><%= pluralize(16, "like") %></strong></div>
-        <div>
-            <span><strong><%= post.user.name %></strong></span>
-            <span><%= post.content %></span>
-        </div>
-        <div class="light-color post-time"><%= time_ago_in_words(post.created_at).upcase %>AGO</div>
-        <hr>
-        <div class="row actions">
-            <form action="#" class="w-100">
-                <div>
-                    <textarea class="form-control comment-input border-0" placeholder="Add a comment ..." rows="1"></textarea>
-                </div>
-            </form>
-        </div>
-    </div>
-<%end%> =end
